@@ -1,0 +1,13 @@
+services:
+  day0-shield:
+    build: .
+    image: day0-shield:1.0
+    ports: ["8080:8080"]
+    env_file: .env
+    volumes: ["day0_data:/data"]
+    read_only: true
+    tmpfs: ["/tmp"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+volumes:
+  day0_data:

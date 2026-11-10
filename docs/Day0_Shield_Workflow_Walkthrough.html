@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day-0 Shield - Complete Workflow Walkthrough</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 12mm 15mm;
+      @bottom-right {
+        content: counter(page) " / " counter(pages);
+        font-size: 8pt;
+        color: #718096;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1a202c;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      page-break-after: always;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #003087;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .header-title {
+      font-size: 16pt;
+      font-weight: 700;
+      color: #003087;
+      margin: 0;
+    }
+    .header-tag {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #0070ba;
+      background: #f0f7ff;
+      border: 1px solid #cce5ff;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .description {
+      font-size: 10pt;
+      line-height: 1.4;
+      color: #4a5568;
+      margin-bottom: 12px;
+      background: #f7fafc;
+      border-left: 4px solid #0070ba;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+    }
+    .image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #edf2f7;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      max-height: 145mm;
+    }
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .footer {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: #a0aec0;
+      border-top: 1px solid #edf2f7;
+      padding-top: 4px;
+    }
+    /* Cover Page */
+    .cover-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 170mm;
+      background: linear-gradient(135deg, #001C3D 0%, #003087 60%, #0070BA 100%);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .cover-title {
+      font-size: 32pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .cover-subtitle {
+      font-size: 15pt;
+      font-weight: 300;
+      color: #E6F0FA;
+      margin-bottom: 24px;
+      max-width: 800px;
+    }
+    .cover-meta {
+      font-size: 10pt;
+      color: #B8D5E5;
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      font-size: 11pt;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COVER PAGE -->
+  <div class="page">
+    <div class="cover-page">
+      <div class="badge">PayPal AI Partner Hackathon 2026 - Production Walkthrough</div>
+      <div class="cover-title">Day-0 Shield</div>
+      <div class="cover-subtitle">Autonomous Commercial Risk Twin & Proactive Disaster Sentinel for High-Volume PayPal Merchants</div>
+      <div class="cover-meta">
+        <strong>Live Production URL:</strong> https://paypal-day0-shield.onrender.com/<br>
+        <strong>Author:</strong> Karthick M (karthick@algojaxon.com)<br>
+        <strong>License:</strong> MIT License (c) 2026 Karthick M<br>
+        <strong>Verification Mode:</strong> PayPal Enterprise Sandbox Certified & LangGraph Read-Only Guarded
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 1: Role-Based Authentication Gateway</h2>
+      <span class="header-tag">Workflow Step 1 of 15</span>
+    </div>
+    <div class="description">Zero-trust login portal enforcing Argon2id password hashing, CSRF protection, and dual-role session governance (Approver vs Viewer).</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/01_login_portal.png" alt="Step 1: Role-Based Authentication Gateway">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 2: Technical Architecture & Problem Dossier</h2>
+      <span class="header-tag">Workflow Step 2 of 15</span>
+    </div>
+    <div class="description">Interactive technical documentation detailing disaster-driven INR dispute risks, mathematical CERI formulations, and PayPal API boundaries.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/02_technical_dossier.png" alt="Step 2: Technical Architecture & Problem Dossier">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 2b: Worldwide Commercial Trade Corridors</h2>
+      <span class="header-tag">Workflow Step 3 of 15</span>
+    </div>
+    <div class="description">Global logistics matrix detailing 15 premier commercial hubs across Americas, EMEA, APAC, and South Asia with live Open-Meteo telemetry.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/02b_worldwide_trade_corridors.png" alt="Step 2b: Worldwide Commercial Trade Corridors">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 2c: Future Architecture & Enterprise Roadmap</h2>
+      <span class="header-tag">Workflow Step 4 of 15</span>
+    </div>
+    <div class="description">Six enterprise expansion pillars: multi-carrier rerouting, cross-border FX hedging, customs EDI, IoT cold-chain telemetry, zk-SNARK dispute proofs, and federated agent learning.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/02c_future_architecture_roadmap.png" alt="Step 2c: Future Architecture & Enterprise Roadmap">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 3: Autonomous Risk Dashboard & Live Telemetry</h2>
+      <span class="header-tag">Workflow Step 5 of 15</span>
+    </div>
+    <div class="description">Real-time command center displaying gross financial exposure, averted loss projections, 60-day Monte Carlo curves, and Open-Meteo alerts.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/03_risk_dashboard.png" alt="Step 3: Autonomous Risk Dashboard & Live Telemetry">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 4: Real-Time Meteorological Hazard Ingestion</h2>
+      <span class="header-tag">Workflow Step 6 of 15</span>
+    </div>
+    <div class="description">Simulating severe flood disruption along the Chennai-Bengaluru commercial corridor, dynamically generating risk twins for exposed consignments.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/04_hazard_simulation.png" alt="Step 4: Real-Time Meteorological Hazard Ingestion">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 5: At-Risk Commercial Exposure (AG Grid)</h2>
+      <span class="header-tag">Workflow Step 7 of 15</span>
+    </div>
+    <div class="description">Enterprise AG Grid categorizing open customer orders and recurring subscriptions mapped against forecasted transit halts and disruption vectors.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/05_at_risk_exposure.png" alt="Step 5: At-Risk Commercial Exposure (AG Grid)">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 5b: Exposure Record Inspector & Mitigation Plan</h2>
+      <span class="header-tag">Workflow Step 8 of 15</span>
+    </div>
+    <div class="description">Slide-out inspection drawer displaying individual consignment risk twins, modeled cost-benefit metrics, and idempotent PayPal execution plans.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/05b_at_risk_inspect_drawer.png" alt="Step 5b: Exposure Record Inspector & Mitigation Plan">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 6: Least-Privilege Action Approvals Gate</h2>
+      <span class="header-tag">Workflow Step 9 of 15</span>
+    </div>
+    <div class="description">Mandatory human review interface gating PayPal mutations: tracking notices, subscription pauses, and automated dispute defense submissions.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/06_action_approvals.png" alt="Step 6: Least-Privilege Action Approvals Gate">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 7: Proactive Dispute Defense Sentinel</h2>
+      <span class="header-tag">Workflow Step 10 of 15</span>
+    </div>
+    <div class="description">Automated PayPal INR evidence compiler binding meteorological reports, carrier delay telemetry, and merchant communication logs.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/07_dispute_sentinel.png" alt="Step 7: Proactive Dispute Defense Sentinel">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 7b: Dispute Case Inspector & Defense Package</h2>
+      <span class="header-tag">Workflow Step 11 of 15</span>
+    </div>
+    <div class="description">Deep inspection view of PayPal INR claim, presenting dispute timeline, automated evidence packages, and weather verification logs.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/07b_dispute_case_inspector.png" alt="Step 7b: Dispute Case Inspector & Defense Package">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 7c: PayPal Seller Protection RAG & Ingestion Engine</h2>
+      <span class="header-tag">Workflow Step 12 of 15</span>
+    </div>
+    <div class="description">Deterministic semantic retrieval grounded in official PayPal User Agreement §11.2, Force Majeure clauses, and multi-modal merchant policy ingestion protected by Guardrails AI security.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/07c_policy_rag_ingestion.png" alt="Step 7c: PayPal Seller Protection RAG & Ingestion Engine">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 8: LangGraph Multi-Agent Architecture & Observability</h2>
+      <span class="header-tag">Workflow Step 13 of 15</span>
+    </div>
+    <div class="description">Real-time stateful graph execution trace visualizing HazardSentinel, RiskPlanner, PolicyGrounder, and mandatory human write gates.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/08_ai_agent_graph_monitor.png" alt="Step 8: LangGraph Multi-Agent Architecture & Observability">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 9: Multi-Agent Observability & Tool Isolation</h2>
+      <span class="header-tag">Workflow Step 14 of 15</span>
+    </div>
+    <div class="description">Execution audit of LangGraph hazard sentinels, verifying strict read-only tool confinement and deterministic human escalation boundaries.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/09_ai_agent_observability.png" alt="Step 9: Multi-Agent Observability & Tool Isolation">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <h2 class="header-title">Step 10: Compliance & Immutable Audit Ledger</h2>
+      <span class="header-tag">Workflow Step 15 of 15</span>
+    </div>
+    <div class="description">Cryptographic ledger recording all logins, UUID idempotency tokens (PayPal-Request-Id), and human approval events for compliance auditability.</div>
+    <div class="image-container">
+      <img src="../demo/screenshots/10_compliance_audit_ledger.png" alt="Step 10: Compliance & Immutable Audit Ledger">
+    </div>
+    <div class="footer">
+      <span>Day-0 Shield - Autonomous Risk Twin</span>
+      <span>Live URL: https://paypal-day0-shield.onrender.com/</span>
+    </div>
+  </div>
+
+</body>
+</html>

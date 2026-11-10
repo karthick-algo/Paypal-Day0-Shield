@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003087"/>
+      <stop offset="100%" stop-color="#0070BA"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00CFDE"/>
+      <stop offset="100%" stop-color="#00457C"/>
+    </linearGradient>
+  </defs>
+  <path d="M24 4 L40 10 C40 26 33 38 24 44 C15 38 8 26 8 10 Z" fill="url(#shieldGrad)" stroke="#00CFDE" stroke-width="2"/>
+  <!-- PayPal double P symbol -->
+  <path d="M18 14 L24.5 14 C27.5 14 29.5 15.5 29.5 18 C29.5 20.5 27.5 22 24.5 22 L20.5 22 L17.5 34 L15 34 Z" fill="#FFFFFF" opacity="0.95"/>
+  <path d="M21.5 18 L28 18 C31 18 33 19.5 33 22 C33 24.5 31 26 28 26 L24 26 L21 38 L18.5 38 Z" fill="#00CFDE" opacity="0.85"/>
+</svg>

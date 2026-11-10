@@ -1,0 +1,18 @@
+# Top-level deps. Pin + hash with: pip-compile --generate-hashes -o requirements.lock requirements.in
+# Versions intentionally unpinned here; the lock file is the pin. Confirm toolkit/SDK names on Day 1.
+fastapi
+uvicorn
+pydantic>=2
+sqlalchemy[asyncio]>=2
+aiosqlite
+greenlet>=3
+alembic
+httpx
+numpy
+argon2-cffi
+itsdangerous
+langgraph
+langchain
+paypal-agent-toolkit
+# PayPal Python Server SDK: confirm exact package name via APIMatic Context Plugin before adding.
+# optional: asyncpg, langchain-mcp-adapters

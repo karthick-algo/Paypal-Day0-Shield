@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #F4F7FB;
+}
+.ant-layout-sider-trigger {
+  display: none !important;
+}
+/* Clean AG Grid Table Styling */
+.ag-theme-alpine {
+  --ag-header-background-color: #F8FAFD;
+  --ag-header-foreground-color: #003087;
+  --ag-border-color: #E5EDF6;
+  --ag-row-hover-color: #F4F8FE;
+  --ag-selected-row-background-color: #EBF3FC;
+  font-size: 13px;
+}
+.ag-theme-alpine .ag-header-cell-text {
+  font-weight: 600;
+  color: #003087;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+}
+.ag-theme-alpine .ag-header-cell {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.ag-theme-alpine .ag-cell {
+  padding-left: 14px;
+  padding-right: 14px;
+  display: flex;
+  align-items: center;
+}
+/* Strictly forbid text wrapping in ALL table headers across Ant Design and AG Grid */
+.ant-table-thead > tr > th,
+.ant-table-header th,
+.ant-table th,
+.ag-header-cell-text,
+.ag-header-cell-label,
+.ag-header-cell,
+.ag-header-group-cell-label {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  text-overflow: clip !important;
+  overflow: visible !important;
+  vertical-align: middle !important;
+}
+.ag-theme-alpine .ag-header-cell-label {
+  overflow: visible !important;
+}
+.ag-theme-alpine .ag-header-cell-text {
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+/* Fixed, aligned, vertically-centered rows across all tables in the application */
+.ant-table-tbody > tr > td {
+  vertical-align: middle !important;
+  height: 52px !important;
+  padding: 8px 16px !important;
+}
+.ant-table-cell {
+  vertical-align: middle !important;
+}

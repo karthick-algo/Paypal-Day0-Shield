@@ -1,0 +1,31 @@
+# Verify field names against https://render.com/docs/blueprint-spec before deploying.
+services:
+  - type: web
+    name: day0-shield
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /healthz
+    disk: { name: data, mountPath: /data, sizeGB: 1 }
+    envVars:
+      - { key: APP_ENV, value: production }
+      - { key: PAYPAL_ENV, value: sandbox }
+      - { key: DATA_DIR, value: /data }
+      - { key: FORCE_HTTPS, value: "true" }
+      - { key: TRUSTED_PROXY_IPS, value: "*" }   # Render's proxy fronts the service
+      - { key: SECRET_KEY, generateValue: true }
+      - { key: ALLOWED_HOSTS, sync: false }
+      - { key: ADMIN_USERNAME, sync: false }
+      - { key: ADMIN_PASSWORD_HASH, sync: false }
+      - { key: PAYPAL_CLIENT_ID, sync: false }
+      - { key: PAYPAL_SECRET, sync: false }
+      - { key: PAYPAL_WEBHOOK_ID, sync: false }
+      - { key: LLM_PROVIDER, sync: false }
+      - { key: LLM_MODEL, sync: false }
+      - { key: LLM_API_KEY, sync: false }
+      - { key: AG_STUDIO_LICENSE_KEY, sync: false }
+      - { key: BRYNTUM_LICENSE_KEY, sync: false }
+      - { key: MAX_REFUND_OFFER_USD, sync: false }
+      - { key: MAX_ACTIONS_PER_MINUTE, sync: false }
+      - { key: MAX_DAILY_WRITES, sync: false }
+      - { key: MAX_LLM_CALLS_PER_HOUR, sync: false }
